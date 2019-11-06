@@ -1,0 +1,8 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,flexipage:availableForAllPageTypes" access="global" >
+	<div>
+        <lightning:button label="Information" variant="brand" onclick="{!c.showInfoToast}" />
+        <lightning:button label="Error" variant="destructive" onclick="{!c.showErrorToast}" />
+        <lightning:button label="Warning" variant="inverse" onclick="{!c.showWarningToast}" class="warning_cls" />
+        <lightning:button label="Success" variant="inverse" onclick="{!c.showSuccessToast}" class="success_cls" />
+    </div>
+</aura:component>

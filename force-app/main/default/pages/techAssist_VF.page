@@ -1,0 +1,27 @@
+<apex:page lightningStylesheets="true" standardController="ServiceAppointment">
+    <apex:includeLightning />
+    <div id="container"></div>
+
+    <script>
+    $Lightning.use("c:techAssist_LWC_App",function()
+    {
+        $Lightning.createComponent(
+            "c:techAssist_LWC",
+            {recordId: "{!ServiceAppointment.Id}"},
+            "container",
+            function(cmp)
+            {
+                console.log('component created');
+            });
+    });
+
+    </script>
+<!-- Begin Default Content REMOVE THIS -->
+<!--<h1>Congratulations</h1>
+This is your new Page
+-->
+<!-- End Default Content REMOVE THIS -->
+
+<!--Works <apex:outputLink value="/{!ServiceAppointment.Id}" target="_blank">Test Link</apex:outputLink> -->
+<!--Did not compile since looking for greeting in SA controller <apex:outputLink value="/{!ServiceAppointment.Id}" target="_blank">"{!greeting}"</apex:outputLink> -->
+</apex:page>
